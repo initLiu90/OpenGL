@@ -1,4 +1,4 @@
-package com.lzp.opengl;
+package com.lzp.opengl.day1;
 
 import android.opengl.GLSurfaceView;
 
