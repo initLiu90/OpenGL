@@ -29,6 +29,8 @@ public class ShaderHelper {
 
         int[] compileStatus = new int[1];
         GLES20.glGetShaderiv(shaderObjectId, GLES20.GL_COMPILE_STATUS, compileStatus, 0);
+        Log.e("Test", "Results of compiling source:\n" + shaderSourceCode + "\n:" +
+                GLES20.glGetShaderInfoLog(shaderObjectId));
         if (compileStatus[0] == 0) {
             GLES20.glDeleteShader(shaderObjectId);
             Log.e("Test", "compile failed");
